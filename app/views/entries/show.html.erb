@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= turbo_frame_tag "entry", target: "_top" do %>
+<%= turbo_frame_tag "entry" do %>
   <p>
     <strong>Name:</strong>
     <%= @entry.name %>
@@ -11,7 +11,7 @@
     <%= @entry.abstract %>
   </p>
 
-  <p><%= link_to "More", entry_path(@entry) %></p>
+  <p class="turbo-child"><%= link_to "More", entry_path(@entry) %></p>
 <% end %>
 
 <p>

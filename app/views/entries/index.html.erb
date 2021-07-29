@@ -3,5 +3,5 @@
 <h1>Work</h1>
 
 <% @entries.each do |entry| %>
-  <%= turbo_frame_tag "entry", src: entry_path(entry), target: "_top" %>
+  <%= turbo_frame_tag "entry", src: entry_path(entry), target: "_top", class: "turbo-parent" %>
 <% end %>
