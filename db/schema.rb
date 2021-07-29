@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2021_07_28_201852) do
     t.string "description"
     t.string "tech"
     t.string "client"
+    t.string "client_type"
     t.string "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -1,14 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @entry.name %>
-</p>
+<%= turbo_frame_tag "entry", target: "_top" do %>
+  <p>
+    <strong>Name:</strong>
+    <%= @entry.name %>
+  </p>
+  
+  <p>
+    <strong>Abstract:</strong>
+    <%= @entry.abstract %>
+  </p>
 
-<p>
-  <strong>Abstract:</strong>
-  <%= @entry.abstract %>
-</p>
+  <p><%= link_to "More", entry_path(@entry) %></p>
+<% end %>
 
 <p>
   <strong>Description:</strong>
@@ -30,5 +34,4 @@
   <%= @entry.url %>
 </p>
 
-<%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>
